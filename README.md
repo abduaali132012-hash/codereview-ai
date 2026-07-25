@@ -17,6 +17,8 @@
 * 🛡️ **Security Awareness:** Helps catch exposed secrets, insecure dependencies, and common anti-patterns.
 * 🎯 **Clean UI:** Simple, intuitive interface tailored for quick developer feedback loops.
 
+* npm install
+
 ---
 
 ## 🛠️ Tech Stack
