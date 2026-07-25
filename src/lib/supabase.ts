@@ -1,12 +1,18 @@
 import { createClient } from "@supabase/supabase-js";
+import type { Database } from "../types/database"; // Path to your Database types file
 
-const supabaseUrl = "https://qdfmneetrmzvozwxchlm.supabase.co";
-const supabaseAnonKey =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFkZm1uZWV0cm16dm96d3hjaGxtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM0MTk1MDksImV4cCI6MjA5ODk5NTUwOX0.GAyY086Ho57fVExFyx86kL-g2EwiHVZeKsp3i-uDyPA";
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+if (!supabaseUrl || !supabaseAnonKey) {
+  throw new Error("Missing Supabase environment variables in .env file.");
+}
+
+export const supabase = createClient<Database>(supabaseUrl, supabaseAnonKey, {
   auth: {
-    flowType: "implicit",
+    flowType: "pkce",
     detectSessionInUrl: true,
+    persistSession: true,
+    autoRefreshToken: true,
   },
 });
