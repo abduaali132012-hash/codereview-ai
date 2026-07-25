@@ -15,20 +15,17 @@
 * ⚡ **Lightning Fast:** Built on top of Vite and TypeScript for instantaneous hot-reloading and fast production builds.
 * 🤖 **Automated Analysis:** Scans code structure to suggest optimized alternatives and edge-case fixes.
 * 🛡️ **Security Awareness:** Helps catch exposed secrets, insecure dependencies, and common anti-patterns.
-* 🎯 **Clean UI:** Simple, intuitive interface tailored for quick developer feedback loops.
-
-* npm install
-
-* npm run dev
+* 🎯 **Clean UI:** Simple, intuitive interface built with Tailwind CSS and Framer Motion for seamless developer feedback loops.
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **Language:** [TypeScript](https://www.typescriptlang.org/)
+* **Frontend:** [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
 * **Build Tool:** [Vite](https://vitejs.dev/)
-* **Styling:** CSS3 / HTML5
-* **Version Control:** Git & GitHub
+* **Styling & Animations:** [Tailwind CSS](https://tailwindcss.com/) & [Framer Motion](https://www.framer.com/motion/)
+* **Icons:** [React Icons](https://react-icons.github.io/react-icons/)
+* **Backend / Auth:** [Supabase](https://supabase.com/)
 
 ---
 
