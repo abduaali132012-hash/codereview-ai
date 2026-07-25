@@ -16,6 +16,7 @@
 * 🤖 **Automated Analysis:** Scans code structure to suggest optimized alternatives and edge-case fixes.
 * 🛡️ **Security Awareness:** Helps catch exposed secrets, insecure dependencies, and common anti-patterns.
 * 🎯 **Clean UI:** Simple, intuitive interface built with Tailwind CSS and Framer Motion for seamless developer feedback loops.
+* npm install
 
 ---
 
