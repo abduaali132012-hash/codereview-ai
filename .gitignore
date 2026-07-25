@@ -1,3 +1,14 @@
+# Dependencies
+node_modules
+.pnpm-store
+
+# Build & Output
+dist
+dist-ssr
+build
+.next
+.output
+
 # Logs
 logs
 *.log
@@ -7,18 +18,27 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Environment & Local Overrides
 *.local
+.env
+.env.*
+!.env.example
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# IDEs & OS Files
 .DS_Store
+Thumbs.db
+.idea
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# VS Code (ignore workspace settings but keep recommended extensions)
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Tooling Caches
+.eslintcache
+.turbo
