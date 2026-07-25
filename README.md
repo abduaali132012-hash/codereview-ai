@@ -19,6 +19,8 @@
 
 * npm install
 
+* npm run dev
+
 ---
 
 ## 🛠️ Tech Stack
