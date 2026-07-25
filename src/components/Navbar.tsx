@@ -5,6 +5,14 @@ import { FiCode, FiLogOut, FiGithub } from "react-icons/fi";
 export default function Navbar() {
   const { user, signOut } = useAuth();
 
+  const handleSignOut = async () => {
+    try {
+      await signOut();
+    } catch (error) {
+      console.error("Error signing out:", error);
+    }
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-lg">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -25,8 +33,10 @@ export default function Navbar() {
               </span>
             </div>
             <button
-              onClick={signOut}
-              className="flex items-center gap-1.5 rounded-lg border border-border px-3 py-1.5 text-sm text-foreground/70 hover:bg-muted hover:text-foreground cursor-pointer"
+              type="button"
+              onClick={handleSignOut}
+              aria-label="Sign out"
+              className="flex items-center gap-1.5 rounded-lg border border-border px-3 py-1.5 text-sm text-foreground/70 hover:bg-muted hover:text-foreground cursor-pointer transition-colors"
             >
               <FiLogOut className="h-4 w-4" />
               <span className="hidden sm:inline">Sign out</span>
