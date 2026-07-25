@@ -102,6 +102,7 @@ export type Database = {
             foreignKeyName: "reviews_repo_id_fkey";
             columns: ["repo_id"];
             isOneToOne: false;
+            referencedSchema: "public";
             referencedRelation: "user_repos";
             referencedColumns: ["id"];
           }
@@ -171,3 +172,5 @@ export type TablesInsert<T extends keyof Database["public"]["Tables"]> =
   Database["public"]["Tables"][T]["Insert"];
 export type TablesUpdate<T extends keyof Database["public"]["Tables"]> =
   Database["public"]["Tables"][T]["Update"];
+export type Enums<T extends keyof Database["public"]["Enums"]> =
+  Database["public"]["Enums"][T];
